@@ -31,9 +31,11 @@ battery_guard.py  ──reads──>  Windows battery (GetSystemPowerStatus)
 | `fetch_devices.py` | One-time cloud bootstrap: fetches the device's **local key** from the Tuya cloud and writes the runtime config files |
 | `config.json.example` | Thresholds template — copy to `config.json` and fill in |
 
-## Runtime files (kept out of the repo — see `.gitignore`)
+## Runtime files (also committed in the repo)
 
-These hold secrets or personal data and are never committed:
+These hold secrets or personal data. **They are committed here by the owner's
+explicit choice** — if you fork or reuse this project, replace them with your
+own and rotate anything you find in commit history:
 
 | File | Contains | How it's created |
 |---|---|---|
@@ -125,9 +127,12 @@ schtasks /create /tn "BatteryGuard" /tr "python C:\path\to\battery_guard.py guar
 ## Security notes
 
 - The **local key** in `devices.json` is the actual encryption key for LAN
-  control — treat it like a password; the `.gitignore` keeps it out of git.
-- The Tuya **Access Secret** enables cloud API calls on your project — same
-  treatment (kept in `api_secret.txt`/`tinytuya.json`, never committed).
+  control — treat it like a password. Same for the Tuya **Access Secret**
+  (it enables cloud API calls on the project).
+- ⚠️ **In this repository these credential files are committed publicly by
+  the owner's explicit choice** — do not reuse them. If you build on this
+  project, use your own app/portal account and rotate everything you'd
+  otherwise take from commit history.
 - If you re-pair the plug, rerun `fetch_devices.py`; the old key becomes
   invalid automatically once stored nowhere else.
 

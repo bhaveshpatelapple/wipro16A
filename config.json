@@ -1,0 +1,10 @@
+{
+  "_comment": "AlDente-style charge guard tuned for a Wipro Wi-Fi switch (Tuya). Battery stays in the healthy band: mains is cut when it reaches 'high', restored when it drains to 'low'.",
+  "high_percent": 80,
+  "low_percent": 40,
+  "period_seconds": 60,
+  "device_name_contains": "16amp smart plug",
+  "device_id": "d7c4c7fcb6f697a8f9ky6g",
+  "device_ip": null,
+  "log_to_csv": true
+}
