@@ -1,0 +1,17 @@
+# --- secrets & device-private state (never publish) ---
+api_secret.txt
+tinytuya.json
+devices.json
+snapshot.json
+config.json
+
+# --- personal logs & one-off capture artifacts ---
+battery_log.csv
+qr.b64
+qr.png
+decode_qr.py
+debug_plug.py
+
+# --- python noise ---
+__pycache__/
+*.pyc

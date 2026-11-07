@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy this file to config.json and fill in your values. Battery stays in the healthy band: mains is CUT when it reaches high_percent, RESTORED when it drains to low_percent. Leave device_ip as null — the switch is auto-discovered on the LAN by device ID. device_name_contains is a lowercase substring of the device's display name inside your Tuya/Smart Life app.",
+  "high_percent": 80,
+  "low_percent": 40,
+  "period_seconds": 60,
+  "device_name_contains": "16amp",
+  "device_id": "REPLACE_WITH_YOUR_DEVICE_VIRTUAL_ID",
+  "device_ip": null,
+  "log_to_csv": true
+}
